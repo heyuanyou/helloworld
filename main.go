@@ -35,7 +35,7 @@ func main() {
 			"message": "pong",
 		})
 	})
-	r.GET("redis/set", func(c *gin.Context) {
+	r.GET("redis/get", func(c *gin.Context) {
 		fmt.Println("redis get...")
 		s, err := rdb.Get(context.TODO(), "test_key").Result()
 		if err != nil {
